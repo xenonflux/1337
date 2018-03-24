@@ -61,9 +61,9 @@
     <number>1</number>
    </property>
    <property name="text">
-    <string>MultiSend allows you to automatically send up to 100% of your stake to a list of other 1337 address after it matures.
-To Add: enter percentage to give and 1337 address to add to the MultiSend vector. 
-To Delete: Enter address to delete and press delete.
+    <string>MultiSend allows you to automatically send up to 100% of your stake to a list of other Elite addresses after it matures.
+Add: Enter percentage to send. Enter Elite address receving this percentage of your stake. 
+Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</string>
    </property>
    <property name="alignment">

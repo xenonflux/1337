@@ -80,12 +80,12 @@ color: #FFFFFF; border: none; icon-size: 72px; font-size:12px;font-family:Open S
 
 QToolButton:hover
 {
-        background-color: #9d0100;
+        background-color: #752020;
 }
 
 QToolButton:checked
 {
-	background: #720100;
+	background: #4D1515;
         color: #FFFFFF;
         border: none;
 }
@@ -97,7 +97,7 @@ QToolButton#addressBookButton, QToolButton#pasteButton, QToolButton#deleteButton
 
 QMenuBar
 {
-    border-bottom: 1px solid #720100;
+    border-bottom: 1px solid #4D1515;
     background: #1e1e1e;
 	color: #FFFFFF;
 }
@@ -110,7 +110,7 @@ QMenuBar::item
 
 QMenuBar::item:selected
 {
-    background: #9d0100;
+    background: #752020;
     border: 1px solid #AAAAAA;
 	color: #FFFFFF;
 }
@@ -118,7 +118,7 @@ QMenuBar::item:selected
 QMenuBar::item:pressed
 {
     border: 1px solid #AAAAAA;
-    background-color: #9d0100;
+    background-color: #752020;
     margin-bottom:-1px;
     padding-bottom:1px;
 	color: #FFFFFF;
@@ -126,7 +126,7 @@ QMenuBar::item:pressed
 
 QMenu
 {
-    border: 3px solid #9d0100;
+    border: 3px solid #752020;
 	background-color: #1e1e1e;
 }
 
@@ -140,7 +140,7 @@ QMenu::item
 QMenu::item:selected
 {
     color: #FFFFFF;
-    background: #9d0100;
+    background: #752020;
 }
 
 QMenu::item:disabled
@@ -152,7 +152,7 @@ QMenu::item:disabled
 QMenu::separator
 {
     height: 1px;
-    background-color: #9d0100;
+    background-color: #752020;
     margin-top: 1px;
     margin-bottom: 1px;
 }
@@ -184,7 +184,7 @@ QPushButton
 {
     color: #FFFFFF;
     font: bold;
-    background-color: #9d0100;
+    background-color: #752020;
     border-width: 1px;
     border-color: #AAAAAA;
     border-style: solid;
@@ -198,7 +198,7 @@ QPushButton
 QPushButton:pressed
 {
     color: #FFFFFF;
-    background-color: #9d0100;
+    background-color: #752020;
     border: 1px solid #2C2C2C;
 }
 
@@ -415,7 +415,7 @@ background-color: #FFFFFF;
 QProgressBar
 {
     border: 1px solid #262626;
-    background-color: #9d0100;
+    background-color: #752020;
     border-radius: 2px;
     text-align: center;
     color: #FFFFFF;

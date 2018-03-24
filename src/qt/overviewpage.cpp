@@ -123,8 +123,8 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
 	
     // init "out of sync" warning labels
-    ui->labelWalletStatus->setText("(" + tr("Out of sync with the 1337 network") + ")");
-    ui->labelTransactionsStatus->setText("(" + tr("Out of sync with the 1337 network") + ")");
+    ui->labelWalletStatus->setText("(" + tr("Out of sync with the Elite network") + ")");
+    ui->labelTransactionsStatus->setText("(" + tr("Out of sync with the Elite network") + ")");
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);

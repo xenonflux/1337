@@ -36,13 +36,14 @@ static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 10000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 235311570 * COIN;
-static const int64_t COIN_YEAR_REWARD = 1337 * CENT; // 1337%, After fork1 668.5%, after fork2 334.25%
+static const int64_t COIN_YEAR_REWARD = 1.337 * CENT; // 1.337% per year (Final APR). Previous APRs - 1337%, After fork1 668.5%, after fork2 334.25% and so on...
 static const unsigned int FORK_TIME = 1459695600; //  Sun, 03 Apr 2016 15:00:00 GMT
 static const unsigned int FORK_TIME2 = 1472125032; //  Thu, 25 Aug 2016 11:37:12 GMT
 static const unsigned int FORK_TIME3 = 1480081025; //  Fri, 25 Nov 2016 13:37:05 GMT
 static const unsigned int FORK_TIME4 = 1489357342; //  Sun, 12 Mar 2017 22:22:22 GMT
 static const unsigned int FORK_TIME5 = 1497101820; //  Saturday 10 June 2017 13:37:00
-static const unsigned int FORK_TIME6 = 1505150100; //  Sunday 24 Sept 2017 13:37:00
+static const unsigned int FORK_TIME6 = 1505150100; //  Sunday 11 Sept 2017 17:15:00
+static const unsigned int FORK_TIME7 = 1522503420; //  Saturday 31 Mar 2018 13:37:00 GMT
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.

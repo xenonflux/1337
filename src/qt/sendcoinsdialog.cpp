@@ -37,7 +37,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a 1337 address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter an Elite address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
 	ui->splitBlockLineEdit->setPlaceholderText(tr("# of Blocks to Make"));
 #endif
 
@@ -578,7 +578,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
         else if (!CBitcoinAddress(text.toStdString()).IsValid())
         {
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid 1337 address"));
+            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid Elite address"));
         }
         else
         {

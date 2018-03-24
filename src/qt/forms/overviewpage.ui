@@ -48,13 +48,13 @@
         <item>
          <widget class="QLabel" name="labelWalletStatus">
           <property name="toolTip">
-           <string>The displayed information may be out of date. Your wallet automatically synchronizes with the 1337 network after a connection is established, but this process has not completed yet.</string>
+           <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Elite network after a connection is established, but this process has not completed yet.</string>
           </property>
           <property name="styleSheet">
            <string notr="true">QLabel { color: red; }</string>
           </property>
           <property name="text">
-           <string notr="true">(Out of sync with the 1337 network)</string>
+           <string notr="true">(Out of sync with the Elite network)</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -384,20 +384,20 @@
              </font>
             </property>
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#333333;&quot;&gt;Recent 1337 Transactions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; color:#333333;&quot;&gt;Recent Elite Transactions&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="labelTransactionsStatus">
             <property name="toolTip">
-             <string>The displayed information may be out of date. Your wallet automatically synchronizes with the 1337 network after a connection is established, but this process has not completed yet.</string>
+             <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Elite network after a connection is established, but this process has not completed yet.</string>
             </property>
             <property name="styleSheet">
              <string notr="true">QLabel { color: red; }</string>
             </property>
             <property name="text">
-             <string notr="true">(Out of sync with the 1337 network)</string>
+             <string notr="true">(Out of sync with the Elite network)</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
