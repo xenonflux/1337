@@ -30,11 +30,15 @@ worked on by several people.
 
 Donate To Support Development
 =================================
-1337: LeetDevFpGxwdbqcmQbNZAikqqRPBRRZP8
-BTC: 17tuXyRsDEBQrZT99JGsubb6N8sh547XvX
-ETH: 0x01E363B7aC2E78EFFa597B0D9eBC50775468C720
-LTC: LXjtkT4ukNqhrRQHufah3aQLqjuJpbZctT
-PayPal: 1337foundationsite@gmail.com
+**1337**: LeetDevFpGxwdbqcmQbNZAikqqRPBRRZP8
+
+**BTC**: 17tuXyRsDEBQrZT99JGsubb6N8sh547XvX
+
+**ETH**: 0x01E363B7aC2E78EFFa597B0D9eBC50775468C720
+
+**LTC**: LXjtkT4ukNqhrRQHufah3aQLqjuJpbZctT
+
+**PayPal**: 1337foundationsite@gmail.com
 
 
 License
