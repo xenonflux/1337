@@ -1061,7 +1061,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV1(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8);
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1072,7 +1072,7 @@ int64_t GetProofOfStakeRewardV1(int64_t nCoinAge, int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV2(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) / 2;
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 2;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1083,7 +1083,7 @@ int64_t GetProofOfStakeRewardV2(int64_t nCoinAge, int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV3(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) / 4;
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 4;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1094,7 +1094,7 @@ int64_t GetProofOfStakeRewardV3(int64_t nCoinAge, int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV4(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) / 8;
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 8;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1105,7 +1105,7 @@ int64_t GetProofOfStakeRewardV4(int64_t nCoinAge, int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV5(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) / 16;
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 16;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1116,7 +1116,7 @@ int64_t GetProofOfStakeRewardV5(int64_t nCoinAge, int64_t nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV6(int64_t nCoinAge, int64_t nFees)
 {
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8) / 32;
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 32;
 
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
@@ -1126,17 +1126,6 @@ int64_t GetProofOfStakeRewardV6(int64_t nCoinAge, int64_t nFees)
 
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetProofOfStakeRewardV7(int64_t nCoinAge, int64_t nFees)
-{
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD_OLD * 33 / (365 * 33 + 8) / 64;
-
-    if (fDebug && GetBoolArg("-printcreation"))
-        printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
-
-    return nSubsidy + nFees;
-}
-
-// miner's coin stake reward based on coin age spent (coin-days)
-int64_t GetProofOfStakeRewardV8(int64_t nCoinAge, int64_t nFees)
 {
     int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
 
@@ -1149,10 +1138,20 @@ int64_t GetProofOfStakeRewardV8(int64_t nCoinAge, int64_t nFees)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, unsigned int nTime)
 {
     int64_t nReward = 0;
-    if(nTime > FORK_TIME7)
-        nReward = GetProofOfStakeRewardV8((int64_t)nCoinAge, nFees);	
-    else if(nTime > FORK_TIME6)
-        nReward = GetProofOfStakeRewardV7((int64_t)nCoinAge, nFees);
+    if(nTime > FORK_TIME6)
+        nReward = GetProofOfStakeRewardV7((int64_t)nCoinAge, nFees);	
+    else if(nTime > FORK_TIME5)
+        nReward = GetProofOfStakeRewardV6((int64_t)nCoinAge, nFees);
+    else if(nTime > FORK_TIME4)
+        nReward = GetProofOfStakeRewardV5((int64_t)nCoinAge, nFees);
+    else if(nTime > FORK_TIME3)
+        nReward = GetProofOfStakeRewardV4((int64_t)nCoinAge, nFees);
+    else if(nTime > FORK_TIME2)
+        nReward = GetProofOfStakeRewardV3((int64_t)nCoinAge, nFees);
+    else if(nTime > FORK_TIME)
+        nReward = GetProofOfStakeRewardV2((int64_t)nCoinAge, nFees);
+    else
+       nReward = GetProofOfStakeRewardV1((int64_t)nCoinAge, nFees);
 
     return nReward;
 }
@@ -3024,7 +3023,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         CAddress addrFrom;
         uint64_t nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-        if (pfrom->nVersion < (GetAdjustedTime() > FORK_TIME7 ? MIN_PROTO_VERSION_FORK : MIN_PROTO_VERSION))
+        if (pfrom->nVersion < (GetAdjustedTime() > FORK_TIME6 ? MIN_PROTO_VERSION_FORK : MIN_PROTO_VERSION))
         {
             // Since February 20, 2012, the protocol is initiated at version 209,
             // and earlier versions are no longer supported
@@ -3102,7 +3101,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         static int nAskedForBlocks = 0;
         if (!pfrom->fClient && !pfrom->fOneShot &&
             (pfrom->nStartingHeight > (nBestHeight - 144)) &&
-            (pfrom->nVersion < NOBLKS_VERSION_START || pfrom->nVersion > (GetAdjustedTime() > FORK_TIME7 ? NOBLKS_VERSION_END_FORK : NOBLKS_VERSION_END)) &&
+            (pfrom->nVersion < NOBLKS_VERSION_START || pfrom->nVersion > (GetAdjustedTime() > FORK_TIME6 ? NOBLKS_VERSION_END_FORK : NOBLKS_VERSION_END)) &&
              (nAskedForBlocks < 1 || vNodes.size() <= 1))
         {
             nAskedForBlocks++;

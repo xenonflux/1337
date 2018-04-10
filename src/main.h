@@ -43,8 +43,7 @@ static const unsigned int FORK_TIME2 = 1472125032; //  Thu, 25 Aug 2016 11:37:12
 static const unsigned int FORK_TIME3 = 1480081025; //  Fri, 25 Nov 2016 13:37:05 GMT
 static const unsigned int FORK_TIME4 = 1489357342; //  Sun, 12 Mar 2017 22:22:22 GMT
 static const unsigned int FORK_TIME5 = 1497101820; //  Saturday 10 June 2017 13:37:00
-static const unsigned int FORK_TIME6 = 1505150100; //  Sunday 11 Sept 2017 17:15:00
-static const unsigned int FORK_TIME7 = 1522503420; //  Saturday 31 Mar 2018 13:37:00 GMT
+static const unsigned int FORK_TIME6 = 1522503420; //  Saturday 31 Mar 2018 13:37:00 GMT
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 // Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp.
@@ -141,6 +140,7 @@ int64_t GetProofOfStakeRewardV3(int64_t nCoinAge, int64_t nFees);
 int64_t GetProofOfStakeRewardV4(int64_t nCoinAge, int64_t nFees);
 int64_t GetProofOfStakeRewardV5(int64_t nCoinAge, int64_t nFees);
 int64_t GetProofOfStakeRewardV6(int64_t nCoinAge, int64_t nFees);
+int64_t GetProofOfStakeRewardV7(int64_t nCoinAge, int64_t nFees);
 unsigned int ComputeMinWork(unsigned int nBase, int64_t nTime);
 unsigned int ComputeMinStake(unsigned int nBase, int64_t nTime, unsigned int nBlockTime);
 int GetNumBlocksOfPeers();
